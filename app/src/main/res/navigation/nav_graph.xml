@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/testFragment">
+
+    <fragment
+        android:id="@+id/dialogFragment"
+        android:name="com.example.sprint_three_api_alertdialog.ui.fragments.dialog.DialogFragment"
+        android:label="fragment_dialog"
+        tools:layout="@layout/fragment_dialog" >
+        <action
+            android:id="@+id/action_dialogFragment_to_testFragment"
+            app:destination="@id/testFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.sprint_three_api_alertdialog.ui.fragments.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_testFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+        <action
+            android:id="@+id/action_testFragment_to_anonymousFragment"
+            app:destination="@id/anonymousFragment" />
+        <action
+            android:id="@+id/action_testFragment_to_synonymFragment"
+            app:destination="@id/synonymFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anonymousFragment"
+        android:name="com.example.sprint_three_api_alertdialog.ui.fragments.anonim.AnonymousFragment"
+        android:label="fragment_anonymous"
+        tools:layout="@layout/fragment_anonymous" />
+    <fragment
+        android:id="@+id/synonymFragment"
+        android:name="com.example.sprint_three_api_alertdialog.ui.fragments.sinonim.SynonymFragment"
+        android:label="fragment_synonym"
+        tools:layout="@layout/fragment_synonym" />
+</navigation>

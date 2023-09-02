@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.sinonim.SynonymFragment">
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="all"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et"
+        android:text="ok"
+        android:layout_marginHorizontal="35dp"
+        app:layout_constraintStart_toStartOf="@id/et"
+        app:layout_constraintEnd_toEndOf="@id/et"/>
+
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/s_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:text="Бабочка"
+                android:elevation="8dp"
+
+                android:background="@drawable/edit_text"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center"
+                android:textColor="@color/greenTrans"
+                app:cornerRadius="10dp"
+                android:textSize="20sp"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/s_start_text_one"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Бабочка"
+                android:elevation="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text"
+                android:gravity="center"
+                android:textColor="@color/greenTrans"
+                app:cornerRadius="10dp"
+                android:textSize="20sp"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/s_text" />
+
+            <TextView
+                android:id="@+id/s_end_text_one"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Бабочка"
+                android:elevation="8dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text"
+                android:gravity="center"
+                android:textColor="@color/greenTrans"
+                android:layout_marginTop="15dp"
+                app:cornerRadius="10dp"
+                android:textSize="20sp"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/s_text" />
+
+            <TextView
+                android:id="@+id/s_start_text_two"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Бабочка"
+                android:elevation="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text"
+                android:gravity="center"
+                android:textColor="@color/greenTrans"
+                app:cornerRadius="10dp"
+                android:textSize="20sp"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="@id/s_start_text_one"
+                app:layout_constraintTop_toBottomOf="@id/s_start_text_one" />
+
+            <TextView
+                android:id="@+id/s_end_text_two"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Бабочка"
+                android:elevation="8dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_text"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/greenTrans"
+                app:cornerRadius="10dp"
+                android:textSize="20sp"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="@id/s_end_text_one"
+                app:layout_constraintTop_toBottomOf="@id/s_end_text_one" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/s_close"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/green_two"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:text="Закрыть"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/s_end_text_one"
+                app:layout_constraintStart_toStartOf="@id/s_start_text_one"
+                app:layout_constraintTop_toBottomOf="@id/s_end_text_two" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
